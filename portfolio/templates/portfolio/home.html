@@ -56,7 +56,21 @@
         </div>
     </section>
 
-    <footer>
+    <div class="d-flex justify-content-space-between container">
+        {% for project in projects %}
+            <div class="mr-5">
+                 <h2>{{ project.title }}</h2>
+                <p>{{ project.description }}</p>
+                <img src="{{ project.image.url }}" alt="" height="50" width="50">
+                {% if project.url %}
+                    <a href="{{ project.url }}">Link</a>
+                {% endif %}
+            </div>
+         {% endfor %}
+    </div>
+
+
+    <footer style="margin-top: 200px; text-align: center">
         <div class="container">
             <div class="row">
                 <p>

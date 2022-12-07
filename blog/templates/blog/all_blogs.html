@@ -1,0 +1,9 @@
+<h1>Hello blog</h1>
+<br>
+{% for blog in blogs %}
+    <div class="mb-5">
+        <h2>{{ blog.title }} <img src="{{ blog.image.url }}" alt="" width="50" height="50"></h2>
+        <p>{{ blog.description }}</p>
+        <p>{{ blog.date }}</p>
+    </div>
+{% endfor %}
