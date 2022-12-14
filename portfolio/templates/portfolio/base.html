@@ -13,23 +13,16 @@
 
     <link rel="stylesheet" href="{% static "portfolio/custom.css" %}">
 
-    {#    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">#}
-
-    {#    <link rel="icon" type="image/png" href="{% static "portfolio/Logo.png" %}">#}
+    <link rel="icon" type="image/png" href="{% static "portfolio/Light_Bulb_Icon.svg" %}">
 
     <title>John's Blog</title>
-    <style>
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-        }
-    </style>
 </head>
 <body>
-<header>
+<header class="header--title flex align-items-center">
     <nav id="topNav" class="navbar navbar-expand-md navbar-light">
         <div class="container">
             <a class="navbar-brand" href="{% url 'home' %}">
-                {#        <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="">#}
+{#                        <img src="{% static "portfolio/Logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="">#}
                 <b style="font-size: 25px;">Olimjon's Blog</b>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -39,22 +32,28 @@
             <div class="collapse navbar-collapse text-center" id="navbarNav">
                 <ul class="navbar-nav ml-auto" style="font-size: 18px;">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% static "p  ortfolio/Profile.pdf" %}">Resume</a>
+                        <a class="nav-link" href="{% static "portfolio/Profile.pdf" %}">Resume</a>
                     </li>
-                    {#          <li class="nav-item">#}
-                    {#            <a class="nav-link" href="https://www.linkedin.com/in/olimjon-akhmadjonov-538b25201/" target="_blank">LinkedIn</a>#}
-                    {#          </li>#}
+{#                      <li class="nav-item">#}
+{#                        <a class="nav-link" href="https://www.linkedin.com/in/olimjon-akhmadjonov-538b25201/" target="_blank">LinkedIn</a>#}
+{#                      </li>#}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'blog:all_blogs' %}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="" target="_blank">Channel</a>
+                        <a class="nav-link" href="https://t.me/+J4DUU8Wqvg45Yjhi" target="_blank">Channel</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
+{#<div class="row justify-content-center">#}
+{#    <div class="col-md-9 text-center">#}
+{#        <h1 id="hometext" class="font-weight-bold">Software Engineer.</h1>#}
+{#    </div>#}
+{#</div>#}
 
 {% block content %}
 
@@ -64,5 +63,7 @@
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
         crossorigin="anonymous">
 </script>
+<script src="{% static "portfolio/main.js" %}"></script>
+<script src="{% static "portfolio/ScrollMonitor.min.js" %}"></script>
 </body>
 </html>
